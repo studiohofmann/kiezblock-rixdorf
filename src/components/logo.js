@@ -14,9 +14,8 @@ export default function Logo() {
             layout: CONSTRAINED
             placeholder: BLURRED
             formats: [AUTO, WEBP]
-            width: 150
+            width: 125
           )
-
           description
         }
       }

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const NavItem = styled(Link)`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: #111;
   display: inline-block;
@@ -40,10 +40,11 @@ const NavItem = styled(Link)`
 const MenuItems = () => {
   return (
     <>
-      <NavItem to="/">About</NavItem>
-      <NavItem to="/404">Services</NavItem>
-      <NavItem to="/">Gallery</NavItem>
-      <NavItem to="/404">Contact</NavItem>
+      <StyledLink to="/aktuell">aktuell</StyledLink>
+      <StyledLink to="/concept">konzept</StyledLink>
+      <StyledLink to="/faq">faq</StyledLink>
+      <StyledLink to="/contact">kontakt</StyledLink>
+      <StyledLink to="/impressum">impressum</StyledLink>
     </>
   )
 }
