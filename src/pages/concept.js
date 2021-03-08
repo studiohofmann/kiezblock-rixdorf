@@ -4,7 +4,11 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import ComponentLayout from "../components/component-layout"
 
-const ConceptStyle = styled.div``
+const ConceptStyle = styled.div`
+  h1 {
+    text-transform: uppercase;
+  }
+`
 
 export default function Concept({ data }) {
   return (
