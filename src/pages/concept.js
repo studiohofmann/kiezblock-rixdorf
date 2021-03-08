@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import ComponentLayout from "../components/component-layout"
@@ -11,6 +12,13 @@ const ConceptStyle = styled.div`
 `
 
 export default function Concept({ data }) {
+  const imageProblems = getImage(data.contentfulConcept.imageProblems)
+  const imageConcept = getImage(data.contentfulConcept.imageConcept)
+  const imageActivities = getImage(data.contentfulConcept.imageActivities)
+  const imageCyclists = getImage(data.contentfulConcept.imageCyclists)
+  const imagePlaces = getImage(data.contentfulConcept.imagePlaces)
+  const imageMainStreets = getImage(data.contentfulConcept.imageMainStreets)
+
   return (
     <Layout>
       <ComponentLayout>
@@ -25,6 +33,7 @@ export default function Concept({ data }) {
                   .html,
             }}
           />
+          <GatsbyImage image={imageProblems} />
           <h2>{data.contentfulConcept.headingConcept}</h2>
           <div
             className="body"
@@ -34,6 +43,7 @@ export default function Concept({ data }) {
                   .html,
             }}
           />
+          <GatsbyImage image={imageConcept} />
           <h2>{data.contentfulConcept.headingActivities}</h2>
           <div
             className="body"
@@ -43,6 +53,7 @@ export default function Concept({ data }) {
                   .html,
             }}
           />
+          <GatsbyImage image={imageActivities} />
           <h2>{data.contentfulConcept.headingOneWayStreets}</h2>
           <div
             className="body"
@@ -61,6 +72,7 @@ export default function Concept({ data }) {
                   .html,
             }}
           />
+          <GatsbyImage image={imageCyclists} />
           <h2>{data.contentfulConcept.headingPlaces}</h2>
           <div
             className="body"
@@ -70,6 +82,7 @@ export default function Concept({ data }) {
                   .html,
             }}
           />
+          <GatsbyImage image={imagePlaces} />
           <h2>{data.contentfulConcept.headingMainStreets}</h2>
           <div
             className="body"
@@ -79,6 +92,7 @@ export default function Concept({ data }) {
                   .childMarkdownRemark.html,
             }}
           />
+          <GatsbyImage image={imageMainStreets} />
         </ConceptStyle>
       </ComponentLayout>
     </Layout>
@@ -95,6 +109,56 @@ export const query = graphql`
       headingCyclists
       headingPlaces
       headingMainStreets
+
+      imageProblems {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+          width: 1500
+        )
+      }
+      imageConcept {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+          width: 1500
+        )
+      }
+      imageActivities {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+          width: 1500
+        )
+      }
+      imageCyclists {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+          width: 1500
+        )
+      }
+      imagePlaces {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+          width: 1500
+        )
+      }
+
+      imageMainStreets {
+        gatsbyImageData(
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+          width: 1500
+        )
+      }
     }
     contentfulConceptTextProblemsTextNode {
       childMarkdownRemark {
