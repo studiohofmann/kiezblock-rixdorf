@@ -5,6 +5,10 @@ import styled from "styled-components"
 
 const StyledLayout = styled.div`
   margin: 0.7rem;
+
+  @media (min-width: 992px) {
+    margin: 0 33vw 0 33vw;
+  }
 `
 
 export default function Layout({ children }) {

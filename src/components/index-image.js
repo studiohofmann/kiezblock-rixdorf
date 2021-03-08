@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-
 import BackgroundImage from "gatsby-background-image"
+import ComponentLayout from "./component-layout"
 
 const BackgroundSection = ({ className }) => {
   const data = useStaticQuery(
@@ -23,12 +23,13 @@ const BackgroundSection = ({ className }) => {
   const imageData = data.contentfulIndex.image.fluid
 
   return (
-    <BackgroundImage
-      Tag="section"
-      className={className}
-      fluid={imageData}
-      backgroundColor={`#040e18`}
-    ></BackgroundImage>
+    <ComponentLayout>
+      <BackgroundImage
+        Tag="section"
+        className={className}
+        fluid={imageData}
+      ></BackgroundImage>
+    </ComponentLayout>
   )
 }
 

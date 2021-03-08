@@ -3,48 +3,32 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #111;
-  display: inline-block;
-  white-space: nowrap;
-  margin: 0 1vw;
-  transition: all 200ms ease-in;
-  position: relative;
+  text-transform: uppercase;
 
-  :after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 0%;
-    content: ".";
-    color: transparent;
-    background: goldenrod;
-    height: 1px;
-    transition: all 0.4s ease-in;
-  }
-
-  :hover {
-    color: goldenrod;
-    ::after {
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    padding: 20px 0;
-    font-size: 1.5rem;
-    z-index: 6;
+  @media (min-width: 992px) {
   }
 `
 const MenuItems = () => {
   return (
     <>
-      <StyledLink to="/aktuell">aktuell</StyledLink>
-      <StyledLink to="/concept">konzept</StyledLink>
-      <StyledLink to="/faq">faq</StyledLink>
-      <StyledLink to="/contact">kontakt</StyledLink>
-      <StyledLink to="/impressum">impressum</StyledLink>
+      <StyledLink to="/">
+        <h5>start</h5>
+      </StyledLink>
+      <StyledLink to="/aktuell">
+        <h5>aktuell</h5>
+      </StyledLink>
+      <StyledLink to="/concept">
+        <h5>konzept</h5>
+      </StyledLink>
+      <StyledLink to="/faq">
+        <h5>faq</h5>
+      </StyledLink>
+      <StyledLink to="/contact">
+        <h5>kontakt</h5>
+      </StyledLink>
+      <StyledLink to="/impressum">
+        <h5>impressum</h5>
+      </StyledLink>
     </>
   )
 }

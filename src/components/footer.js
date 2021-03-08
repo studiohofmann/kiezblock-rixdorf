@@ -4,6 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 const FooterStyle = styled.div`
+  margin-bottom: 1rem;
+  padding: 1rem;
   height: 25vh;
   background: #e5907c;
   display: flex;
