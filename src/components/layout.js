@@ -13,6 +13,10 @@ const StyledLayout = styled.div`
     border-radius: 0;
   }
 
+  input {
+    border-radius: 0;
+  }
+
   @media (min-width: 992px) {
     margin: 0 33vw 0 33vw;
   }

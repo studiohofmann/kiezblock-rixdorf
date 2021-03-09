@@ -13,15 +13,17 @@ const NavigationStyle = styled.nav`
     height: 1.5rem;
     width: 1.5rem;
     position: fixed;
-    top: 1rem;
+    top: 0rem;
     right: 1rem;
   }
 `
 
 const Toggle = styled.div`
+  margin-top: 1rem;
   display: none;
   height: 100%;
   cursor: pointer;
+  z-index: 2;
 
   @media (max-width: 768px) {
     display: flex;
@@ -29,18 +31,15 @@ const Toggle = styled.div`
 `
 
 const Navbox = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: flex-end;
-  align-items: center;
-
   @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    height: 100vh;
+    background-color: red;
     position: fixed;
     width: 100%;
-    justify-content: flex-start;
-    background-color: #fff;
     transition: all 0.3s ease-in;
     left: ${props => (props.open ? "-100%" : "0")};
   }

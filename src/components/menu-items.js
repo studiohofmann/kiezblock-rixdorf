@@ -4,6 +4,8 @@ import styled from "styled-components"
 
 const StyledLink = styled(Link)`
   text-transform: uppercase;
+  color: #a1d0e5;
+  text-decoration: none;
 
   @media (min-width: 992px) {
   }
@@ -12,22 +14,22 @@ const MenuItems = () => {
   return (
     <>
       <StyledLink to="/">
-        <h5>start</h5>
+        <h3>start</h3>
       </StyledLink>
       <StyledLink to="/news">
-        <h5>neues</h5>
+        <h3>neues</h3>
       </StyledLink>
       <StyledLink to="/concept">
-        <h5>konzept</h5>
+        <h3>konzept</h3>
       </StyledLink>
       <StyledLink to="/faq">
-        <h5>faq</h5>
+        <h3>faq</h3>
       </StyledLink>
       <StyledLink to="/contact">
-        <h5>kontakt</h5>
+        <h3>kontakt</h3>
       </StyledLink>
       <StyledLink to="/disclaimer">
-        <h5>impressum</h5>
+        <h3>impressum</h3>
       </StyledLink>
     </>
   )

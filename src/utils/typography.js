@@ -21,7 +21,7 @@ const typography = new Typography({
   ],
 
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-    h5: { lineHeight: 0 },
+    h3: { lineHeight: 0 },
   }),
 })
 
