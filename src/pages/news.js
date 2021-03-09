@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "../components/layout"
-import FaqText from "../components/faq-text"
+import NewsPost from "../components/news-post"
 
-export default function Disclaimer({ data }) {
+export default function Index() {
   return (
     <Layout>
-      <FaqText />
+      <NewsPost />
     </Layout>
   )
 }

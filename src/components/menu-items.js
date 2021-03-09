@@ -14,8 +14,8 @@ const MenuItems = () => {
       <StyledLink to="/">
         <h5>start</h5>
       </StyledLink>
-      <StyledLink to="/aktuell">
-        <h5>aktuell</h5>
+      <StyledLink to="/news">
+        <h5>neues</h5>
       </StyledLink>
       <StyledLink to="/concept">
         <h5>konzept</h5>

@@ -23,7 +23,7 @@ export default function NewsletterIntroduction() {
   `)
   return (
     <StyledNewsletterIntroduction>
-      <h1>{data.contentfulNewsletter.heading}</h1>
+      <h2>{data.contentfulNewsletter.heading}</h2>
       <div
         className="body"
         dangerouslySetInnerHTML={{
