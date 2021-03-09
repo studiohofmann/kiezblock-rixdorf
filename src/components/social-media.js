@@ -1,6 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { FaInstagramSquare, FaTwitterSquare } from "react-icons/fa"
+import styled from "styled-components"
+
+const SocialMediaStyle = styled.nav`
+  a {
+    font-size: 3rem;
+    color: #a1d0e5;
+  }
+`
 
 export default function SocialMedia() {
   const data = useStaticQuery(graphql`
@@ -16,7 +24,7 @@ export default function SocialMedia() {
     }
   `)
   return (
-    <div>
+    <SocialMediaStyle>
       <h2>{data.contentfulSocialMedia.heading}</h2>
       <div
         className="body"
@@ -38,6 +46,6 @@ export default function SocialMedia() {
       >
         <FaInstagramSquare />
       </a>
-    </div>
+    </SocialMediaStyle>
   )
 }

@@ -6,6 +6,11 @@ export default function FaqText() {
     query FaqTextQuery {
       contentfulFaq {
         heading
+        introductionText {
+          childMarkdownRemark {
+            html
+          }
+        }
         text {
           childMarkdownRemark {
             html
@@ -17,6 +22,12 @@ export default function FaqText() {
   return (
     <div>
       <h1>{data.contentfulFaq.heading}</h1>
+      <div
+        className="body"
+        dangerouslySetInnerHTML={{
+          __html: data.contentfulFaq.introductionText.childMarkdownRemark.html,
+        }}
+      />
       <div
         className="body"
         dangerouslySetInnerHTML={{
