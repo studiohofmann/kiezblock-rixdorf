@@ -32,7 +32,7 @@ export default class MailChimpForm extends React.Component {
         />
         <br />
         <div variant="contained" color="primary" label="Submit" type="submit">
-          <button variant="button">Envoyer</button>
+          <button variant="button">senden</button>
         </div>
       </form>
     )
