@@ -26,7 +26,7 @@ const MenuItems = () => {
       <StyledLink to="/contact">
         <h5>kontakt</h5>
       </StyledLink>
-      <StyledLink to="/impressum">
+      <StyledLink to="/disclaimer">
         <h5>impressum</h5>
       </StyledLink>
     </>

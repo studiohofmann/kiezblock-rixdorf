@@ -1,19 +1,18 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import ComponentLayout from "./component-layout"
 
-const StyledIndexIntroduction = styled.div`
+const StyledPrivacyInfo = styled.div`
   h1 {
     text-transform: uppercase;
   }
 `
 
-export default function IndexIntroduction() {
+export default function PrivacyInfo() {
   const data = useStaticQuery(graphql`
-    query IndexIntroductionQuery {
-      contentfulIndex {
+    query PrivacyInfoQuery {
+      contentfulPrivacy {
         heading
         text {
           childMarkdownRemark {
@@ -25,17 +24,15 @@ export default function IndexIntroduction() {
   `)
   return (
     <ComponentLayout>
-      <StyledIndexIntroduction>
+      <StyledPrivacyInfo>
+        <h1>{data.contentfulPrivacy.heading}</h1>
         <div
           className="body"
           dangerouslySetInnerHTML={{
-            __html: data.contentfulIndex.text.childMarkdownRemark.html,
+            __html: data.contentfulPrivacy.text.childMarkdownRemark.html,
           }}
         />
-        <div>
-          Mehr über das Konzept erfahrt Ihr <Link to="/concept">hier</Link>.
-        </div>
-      </StyledIndexIntroduction>
+      </StyledPrivacyInfo>
     </ComponentLayout>
   )
 }

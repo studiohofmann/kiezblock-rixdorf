@@ -4,7 +4,7 @@ const typography = new Typography({
   title: "Kiezblock Rixdorf",
   baseFontSize: "17px",
   baseLineHeight: 1.5,
-  scaleRatio: 2,
+  scaleRatio: 3,
   headerFontFamily: ["Raleway", "sans-serif"],
   bodyFontFamily: ["Roboto Slab", "serif"],
   headerWeight: 800,
