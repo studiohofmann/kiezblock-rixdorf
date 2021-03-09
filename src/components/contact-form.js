@@ -63,7 +63,7 @@ export default function ContactForm() {
           </div>
           <div id="buttonContainer">
             <button type="submit" value="Send Message" className="special">
-              abschicken
+              senden
             </button>
             <button type="reset" value="Clear">
               löschen
