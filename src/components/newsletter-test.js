@@ -27,7 +27,6 @@ export default class SubscribeForm extends React.Component {
         id="subscribe-form"
         className="subscribe-form"
         onSubmit={this.handleSubmit}
-        action="/message-success"
       >
         <div
           className="message"
@@ -35,7 +34,6 @@ export default class SubscribeForm extends React.Component {
         />
         <div className="form-row">
           <label>
-            <span className="screen-reader-text">Email address</span>
             <input
               className="subscribe-email"
               type="email"

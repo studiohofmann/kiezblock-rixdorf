@@ -54,15 +54,6 @@ export default function Concept({ data }) {
             }}
           />
           <GatsbyImage image={imageActivities} />
-          <h2>{data.contentfulConcept.headingOneWayStreets}</h2>
-          <div
-            className="body"
-            dangerouslySetInnerHTML={{
-              __html:
-                data.contentfulConceptTextOneWayStreetsTextNode
-                  .childMarkdownRemark.html,
-            }}
-          />
           <h2>{data.contentfulConcept.headingCyclists}</h2>
           <div
             className="body"
@@ -105,7 +96,6 @@ export const query = graphql`
       headingProblems
       headingConcept
       headingActivities
-      headingOneWayStreets
       headingCyclists
       headingPlaces
       headingMainStreets
@@ -171,11 +161,6 @@ export const query = graphql`
       }
     }
     contentfulConceptTextActivitiesTextNode {
-      childMarkdownRemark {
-        html
-      }
-    }
-    contentfulConceptTextOneWayStreetsTextNode {
       childMarkdownRemark {
         html
       }
