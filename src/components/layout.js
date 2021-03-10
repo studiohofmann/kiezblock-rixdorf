@@ -4,8 +4,6 @@ import Footer from "./footer"
 import styled from "styled-components"
 
 const StyledLayout = styled.div`
-  margin: 0.7rem;
-
   button {
     background-color: #a1d0e5;
     color: white;
@@ -15,10 +13,6 @@ const StyledLayout = styled.div`
 
   input {
     border-radius: 0;
-  }
-
-  @media (min-width: 992px) {
-    margin: 0 33vw 0 33vw;
   }
 `
 

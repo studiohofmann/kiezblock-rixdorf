@@ -2,8 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import styled from "styled-components"
 import IndexImage from "../components/index-image"
-import IndexIntroduction from "../components/index-introduction"
-import IndexNews from "../components/index-news"
+import IndexContent from "../components/index-content"
 
 const StyledIndex = styled.div``
 
@@ -12,8 +11,7 @@ export default function Index() {
     <Layout>
       <StyledIndex>
         <IndexImage />
-        <IndexIntroduction />
-        <IndexNews />
+        <IndexContent />
       </StyledIndex>
     </Layout>
   )

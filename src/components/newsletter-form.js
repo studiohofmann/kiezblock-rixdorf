@@ -16,7 +16,7 @@ export default class MailChimpForm extends React.Component {
   }
   render() {
     return (
-      <form onSubmit={this._handleSubmit}>
+      <form onSubmit={this._handleSubmit} action="/message-success">
         <input
           id="outlined-email-input"
           label="Email"

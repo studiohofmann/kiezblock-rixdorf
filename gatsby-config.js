@@ -22,6 +22,13 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-global-styles`,
+      options: {
+        pathToConfigModule: `src/utils/GlobalStyleComponent`,
+        props: {},
+      },
+    },
 
     {
       resolve: `gatsby-plugin-typography`,

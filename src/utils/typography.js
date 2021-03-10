@@ -4,7 +4,7 @@ const typography = new Typography({
   title: "Kiezblock Rixdorf",
   baseFontSize: "17px",
   baseLineHeight: 1.5,
-  scaleRatio: 3,
+  scaleRatio: 2.5,
   headerFontFamily: ["Raleway", "sans-serif"],
   bodyFontFamily: ["Roboto Slab", "serif"],
   headerWeight: 800,
@@ -12,7 +12,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "Raleway",
-      styles: ["800"],
+      styles: ["800, 100"],
     },
     {
       name: "Roboto Slab",
@@ -20,8 +20,14 @@ const typography = new Typography({
     },
   ],
 
-  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-    h3: { lineHeight: 0 },
+  overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options, styles) => ({
+    h1: { textTransform: "uppercase" },
+    h2: {
+      textTransform: "uppercase",
+      ...scale(2 / 5),
+      marginBottom: rhythm(0),
+    },
+    h3: { textTransform: "uppercase", ...scale(1 / 5) },
   }),
 })
 

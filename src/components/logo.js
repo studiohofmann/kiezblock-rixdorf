@@ -4,8 +4,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 
 const LogoStyle = styled.nav`
+  width: 10rem;
+
   @media (min-width: 992px) {
-    width: 11rem;
     position: fixed;
     top: 1rem;
     left: 1rem;

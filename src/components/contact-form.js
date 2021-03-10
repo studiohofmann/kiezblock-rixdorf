@@ -5,29 +5,6 @@ import ComponentLayout from "./component-layout"
 const ContactFormStyle = styled.div`
   display: flex;
 
-  #form {
-    width: 100%;
-  }
-
-  #name {
-    width: 100%;
-    background-color: #a1d0e5;
-    border: none;
-  }
-
-  #email {
-    width: 100%;
-    background-color: #a1d0e5;
-    border: none;
-  }
-
-  #message {
-    width: 100%;
-    background-color: #a1d0e5;
-    border: none;
-    resize: none;
-  }
-
   #buttonContainer {
     display: flex;
     justify-content: space-between;
