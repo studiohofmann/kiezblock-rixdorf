@@ -8,7 +8,7 @@ export default function Concept({ data }) {
   return (
     <Layout>
       <h1>Konzept</h1>
-      {data.allContentfulConceptTest.edges.map(edge => {
+      {data.allContentfulConcept.edges.map(edge => {
         const image = getImage(edge.node.image)
         return (
           <ComponentLayout className="post" key={edge.node.id}>
@@ -28,7 +28,7 @@ export default function Concept({ data }) {
 }
 export const query = graphql`
   query {
-    allContentfulConceptTest(sort: { fields: orderNumber }) {
+    allContentfulConcept(sort: { fields: orderNumber }) {
       edges {
         node {
           id
