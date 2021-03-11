@@ -21,9 +21,11 @@ const FooterStyle = styled.div`
   }
 
   #logo {
+    flex: 1;
     margin-right: 0.5rem;
   }
   #copyright {
+    flex: 2;
     margin-left: 0.5rem;
   }
 
@@ -44,6 +46,7 @@ const FooterStyle = styled.div`
 
   @media (min-width: 992px) {
     flex-direction: row;
+    align-items: flex-end;
 
     #newsletter {
       flex: 1;

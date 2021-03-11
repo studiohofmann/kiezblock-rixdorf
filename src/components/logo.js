@@ -22,6 +22,7 @@ export default function Logo() {
             layout: CONSTRAINED
             placeholder: BLURRED
             formats: [AUTO, WEBP]
+            quality: 100
             width: 300
           )
           description
@@ -34,10 +35,7 @@ export default function Logo() {
   return (
     <LogoStyle>
       <div>
-        <GatsbyImage
-          image={image}
-          alt={data.contentfulHeader.logo.description}
-        />
+        <GatsbyImage image={image} alt={image.description} />
       </div>
     </LogoStyle>
   )

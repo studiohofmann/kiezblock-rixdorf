@@ -13,6 +13,7 @@ const BackgroundSection = ({ className }) => {
             fluid(maxWidth: 1500, quality: 100) {
               ...GatsbyContentfulFluid_withWebp
             }
+            description
           }
         }
       }
@@ -20,14 +21,15 @@ const BackgroundSection = ({ className }) => {
   )
 
   // Set ImageData.
-  const imageData = data.contentfulIndex.image.fluid
+  const image = data.contentfulIndex.image.fluid
 
   return (
     <ComponentLayout>
       <BackgroundImage
         Tag="section"
         className={className}
-        fluid={imageData}
+        fluid={image}
+        alt={data.contentfulIndex.image.description}
       ></BackgroundImage>
     </ComponentLayout>
   )
