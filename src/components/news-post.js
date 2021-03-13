@@ -8,7 +8,6 @@ export default function NewsPost() {
       allContentfulNews {
         nodes {
           heading
-          date
           text {
             childMarkdownRemark {
               html
@@ -21,11 +20,11 @@ export default function NewsPost() {
   return (
     <ComponentLayout>
       <div>
-        {data.allContentfulNews.nodes.map(({ heading, date, text }, i) => {
+        {data.allContentfulNews.nodes.map(({ heading, text }, i) => {
           return (
             <div>
               <h2 key={i}>{heading}</h2>
-              <h3 key={i}>{date}</h3>
+
               <div
                 className="body"
                 dangerouslySetInnerHTML={{

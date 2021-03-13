@@ -28,7 +28,7 @@ export default function IndexContent() {
       }
       contentfulNews {
         heading
-        date
+
         text {
           childMarkdownRemark {
             html
@@ -71,7 +71,6 @@ export default function IndexContent() {
       <ComponentLayout>
         <h1>{data.contentfulIndex.headingNews}</h1>
 
-        <h4>{data.contentfulNews.date}</h4>
         <h2>{data.contentfulNews.heading}</h2>
         <div
           className="body"

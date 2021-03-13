@@ -7,7 +7,7 @@ export default function IndexNews() {
     query IndexNewsQuery {
       contentfulNews {
         heading
-        date
+
         text {
           childMarkdownRemark {
             html
@@ -19,7 +19,7 @@ export default function IndexNews() {
   return (
     <ComponentLayout>
       <h2>{data.contentfulNews.heading}</h2>
-      <h3>{data.contentfulNews.date}</h3>
+
       <div
         className="body"
         dangerouslySetInnerHTML={{
