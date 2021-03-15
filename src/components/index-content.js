@@ -1,6 +1,8 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import ComponentLayout from "./component-layout"
+import Demands from "./demands"
+import IndexNews from "./index-news"
 
 export default function IndexContent() {
   const data = useStaticQuery(graphql`
@@ -12,24 +14,8 @@ export default function IndexContent() {
             html
           }
         }
-        headingDemands
-        textDemands {
-          childMarkdownRemark {
-            html
-          }
-        }
         headingSupporters
         textSupporters {
-          childMarkdownRemark {
-            html
-          }
-        }
-        headingNews
-      }
-      contentfulNews {
-        heading
-
-        text {
           childMarkdownRemark {
             html
           }
@@ -50,14 +36,9 @@ export default function IndexContent() {
         />
       </ComponentLayout>
       <ComponentLayout>
-        <h1>{data.contentfulIndex.headingDemands}</h1>
-        <div
-          className="body"
-          dangerouslySetInnerHTML={{
-            __html: data.contentfulIndex.textDemands.childMarkdownRemark.html,
-          }}
-        />
+        <Demands />
       </ComponentLayout>
+
       <ComponentLayout>
         <h1>{data.contentfulIndex.headingSupporters}</h1>
         <div
@@ -68,17 +49,7 @@ export default function IndexContent() {
           }}
         />
       </ComponentLayout>
-      <ComponentLayout>
-        <h1>{data.contentfulIndex.headingNews}</h1>
-
-        <h2>{data.contentfulNews.heading}</h2>
-        <div
-          className="body"
-          dangerouslySetInnerHTML={{
-            __html: data.contentfulNews.text.childMarkdownRemark.html,
-          }}
-        />
-      </ComponentLayout>
+      <IndexNews />
     </div>
   )
 }

@@ -12,7 +12,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: "Raleway",
-      styles: ["800, 100"],
+      styles: ["800", "400", "500"],
     },
     {
       name: "Roboto Slab",
@@ -22,12 +22,9 @@ const typography = new Typography({
 
   overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options, styles) => ({
     h1: { textTransform: "uppercase" },
-    h2: {
-      textTransform: "uppercase",
-      ...scale(2 / 5),
-      marginBottom: rhythm(0),
-    },
-    h3: { textTransform: "uppercase", ...scale(1 / 5) },
+    h2: { fontWeight: 400 },
+    h3: { fontWeight: 400 },
+    h4: { fontWeight: 500 },
   }),
 })
 

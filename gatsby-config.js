@@ -42,7 +42,7 @@ module.exports = {
         // GitHub Flavored Markdown mode (default: true)
         gfm: true,
         // Plugins configs
-        plugins: [],
+        plugins: [`gatsby-remark-emoji-unicode`],
       },
     },
 
@@ -50,6 +50,19 @@ module.exports = {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint: process.env.MAILCHIMP_ENDPOINT,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Kiezblock Rixdorf`,
+        short_name: `kiezblockrixdorf`,
+        start_url: `https://kiezblock-rixdorf.de/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
       },
     },
   ],

@@ -31,7 +31,7 @@ const FooterStyle = styled.div`
     margin: 0;
   }
 
-  h2 {
+  h3 {
     text-align: center;
   }
 
@@ -98,7 +98,7 @@ export default function Footer() {
       <div id="newsContainer">
         <div id="newsletter">
           <ComponentLayout>
-            <h2>{footerData.headingNewsletter}</h2>
+            <h3>{footerData.headingNewsletter}</h3>
             <div
               dangerouslySetInnerHTML={{
                 __html: footerData.textNewsletter.childMarkdownRemark.html,
@@ -109,7 +109,7 @@ export default function Footer() {
         </div>
         <div id="socialMedia">
           <ComponentLayout>
-            <h2>{footerData.headingSocialMedia}</h2>
+            <h3>{footerData.headingSocialMedia}</h3>
             <div
               dangerouslySetInnerHTML={{
                 __html: footerData.textSocialMedia.childMarkdownRemark.html,

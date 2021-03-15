@@ -10,8 +10,8 @@ export default function News({ data }) {
       {data.allContentfulNews.edges.map(edge => {
         return (
           <ComponentLayout className="post" key={edge.node.id}>
-            <h2>{edge.node.heading}</h2>
-            <h3>{edge.node.date}</h3>
+            <h3>{edge.node.heading}</h3>
+            <h4>{edge.node.date}</h4>
             <div
               className="body"
               dangerouslySetInnerHTML={{
