@@ -2,27 +2,30 @@ import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
+import MasonryGalleryComponent from "../components/masonry-gallery-component"
 import ComponentLayout from "../components/component-layout"
 
 export default function Concept({ data }) {
   return (
     <Layout>
       <h1>Konzept</h1>
-      {data.allContentfulConcept.edges.map(edge => {
-        const image = getImage(edge.node.image)
-        return (
-          <ComponentLayout className="post" key={edge.node.id}>
-            <h2>{edge.node.heading}</h2>
-            <div
-              className="body"
-              dangerouslySetInnerHTML={{
-                __html: edge.node.text.childMarkdownRemark.html,
-              }}
-            />
-            <GatsbyImage image={image} alt={image.description} />
-          </ComponentLayout>
-        )
-      })}
+      <MasonryGalleryComponent
+        masonryGallery={data.allContentfulConcept.edges.map(edge => {
+          const image = getImage(edge.node.image)
+          return (
+            <ComponentLayout className="post" key={edge.node.id}>
+              <h3>{edge.node.heading}</h3>
+              <div
+                className="body"
+                dangerouslySetInnerHTML={{
+                  __html: edge.node.text.childMarkdownRemark.html,
+                }}
+              />
+              <GatsbyImage image={image} alt={image.description} />
+            </ComponentLayout>
+          )
+        })}
+      />
     </Layout>
   )
 }
