@@ -1,10 +1,19 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 const LogoStyle = styled.nav`
   width: 10rem;
+
+  #logoBlack:hover {
+    filter: invert(84%) sepia(46%) saturate(484%) hue-rotate(10deg)
+      brightness(91%) contrast(89%);
+  }
+
+  #logo:hover {
+    filter: saturate(100%) brightness(0%);
+  }
 
   @media (min-width: 992px) {
     position: fixed;
@@ -14,29 +23,18 @@ const LogoStyle = styled.nav`
 `
 
 export default function Logo() {
-  const data = useStaticQuery(graphql`
-    query LogoQuery {
-      contentfulHeader {
-        logo {
-          gatsbyImageData(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            formats: [AUTO, WEBP]
-            quality: 100
-            width: 300
-          )
-          description
-        }
-      }
-    }
-  `)
-  const image = getImage(data.contentfulHeader.logo)
-
   return (
     <LogoStyle>
-      <div>
-        <GatsbyImage image={image} alt={image.description} />
-      </div>
+      <Link id="logoBlack" to="/">
+        <StaticImage
+          id="logo"
+          src="http://images.ctfassets.net/ibcn0bfdro5j/6t9zE5iVztShd6WYHQ1lxl/8b05fed6edcdcbc22e67b453c71d8dfd/logo-kiezblock-rixdorf.png"
+          alt="Logo Kiezblock Rixdorf"
+          placeholder="blurred"
+          layout="constrained"
+          width={200}
+        />
+      </Link>
     </LogoStyle>
   )
 }

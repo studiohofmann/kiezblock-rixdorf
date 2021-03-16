@@ -3,10 +3,25 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import MasonryGalleryComponent from "./masonry-gallery-component"
 import { AiOutlineArrowDown } from "react-icons/ai"
+import { rhythm } from "../utils/typography"
 
 const DemandsStyle = styled.div`
   h3 {
     text-align: center;
+  }
+
+  .post {
+    background: #f0f0f0;
+    padding: ${rhythm(1)};
+  }
+
+  p {
+    margin-bottom: ${rhythm(0)};
+  }
+
+  ol {
+    margin-bottom: ${rhythm(0)};
+    margin-top: ${rhythm(1)};
   }
 `
 

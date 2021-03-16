@@ -20,12 +20,14 @@ const typography = new Typography({
     },
   ],
 
-  overrideStyles: ({ adjustFontSizeTo, rhythm, scale }, options, styles) => ({
-    h1: { textTransform: "uppercase" },
-    h2: { fontWeight: 400 },
-    h3: { fontWeight: 400 },
+  overrideStyles: ({ rhythm }, options) => ({
+    h1: { textTransform: "uppercase", marginBottom: rhythm(2.5) },
+    h3: { fontWeight: 400, marginBottom: rhythm(1) },
     h4: { fontWeight: 500 },
+    a: { color: "#a1d0e5", textDecoration: "none" },
+    "a:hover": { color: "#ccce5f" },
   }),
 })
 
 export default typography
+export const rhythm = typography.rhythm

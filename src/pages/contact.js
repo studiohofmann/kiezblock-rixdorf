@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
 import ContactForm from "../components/contact-form"
+import { Helmet } from "react-helmet"
 
 const ContactStyle = styled.div`
   display: flex;
@@ -20,6 +21,11 @@ const ContactStyle = styled.div`
 export default function Contact({ data }) {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kiezblock Rixdorf | Kontakt</title>
+        <link rel="canonical" href="https://kiezblock-rixdorf.de/contact" />
+      </Helmet>
       <h1>{data.contentfulContact.heading}</h1>
       <ContactStyle>
         <div

@@ -3,11 +3,13 @@ import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import NewsletterTest from "./newsletter-test"
+import { Link } from "gatsby"
 import { FaInstagramSquare, FaTwitterSquare } from "react-icons/fa"
 import ComponentLayout from "./component-layout"
+import { rhythm } from "../utils/typography"
 
 const FooterStyle = styled.div`
-  padding: 0.5rem;
+  padding: 50px;
   background: #e5907c;
   color: white;
 
@@ -19,6 +21,24 @@ const FooterStyle = styled.div`
   #copyrightContainer {
     display: flex;
   }
+  #logoBlack {
+    display: inline-flex;
+    align-items: flex-end;
+  }
+
+  #logo {
+    position: absolute;
+    bottom: 0;
+  }
+
+  #logoBlack:hover {
+    filter: invert(84%) sepia(46%) saturate(484%) hue-rotate(10deg)
+      brightness(91%) contrast(89%);
+  }
+
+  #logo:hover {
+    filter: saturate(100%) brightness(0%);
+  }
 
   #copyright {
     width: 100%;
@@ -27,8 +47,12 @@ const FooterStyle = styled.div`
     justify-content: flex-end;
   }
 
-  #copyrightText p {
-    margin: 0;
+  h4 {
+    margin-bottom: ${rhythm(0)};
+  }
+
+  h4 p {
+    margin-bottom: 0;
   }
 
   h3 {
@@ -137,26 +161,29 @@ export default function Footer() {
           <ComponentLayout>
             <p>
               Kiezblock Rixdorf ist eine Kampagne der Initiative „Mehr Kiez für
-              Rixdorf!“ “Mehr Kiez für Rixdorf” ist ein Projekt von Changing
-              Cities e.V.
+              Rixdorf“
+              <br />
+              “Mehr Kiez für Rixdorf” ist ein Projekt von Changing Cities e.V.
             </p>
           </ComponentLayout>
         </div>
       </div>
 
       <div id="copyrightContainer">
-        <StaticImage
-          src="http://images.ctfassets.net/ibcn0bfdro5j/3zet76MsDA2mZyxhFdh9dR/8f9290ed91415620ecb749957ab12611/logo-kiezblock-rixdorf-wei__.png"
-          alt="tbd"
-          placeholder="blurred"
-          layout="constrained"
-          width={80}
-        />
+        <Link id="logoBlack" to="/">
+          <StaticImage
+            id="logo"
+            src="http://images.ctfassets.net/ibcn0bfdro5j/Jk0zkdRd0MbwOUhMDLX5m/135a5626c3adafb2b3ac471fd7fe81ea/logo-kiezblock-rixdorf-blau.png"
+            alt="Logo Kiezblock Rixdorf Blau"
+            placeholder="blurred"
+            layout="constrained"
+            width={80}
+          />
+        </Link>
 
         <div id="copyright">
-          <div id="copyrightYear">{new Date().getFullYear()}&nbsp; </div>
-          <div
-            id="copyrightText"
+          <h4>{new Date().getFullYear()}&nbsp; </h4>
+          <h4
             dangerouslySetInnerHTML={{
               __html: footerData.textCopyright.childMarkdownRemark.html,
             }}

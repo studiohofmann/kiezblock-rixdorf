@@ -1,24 +1,23 @@
 import React from "react"
 import Masonry from "react-masonry-css"
 import styled from "styled-components"
+import { rhythm } from "../utils/typography"
 
 const Style = styled.div`
   .masonry-grid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: -30px;
+    margin-left: ${rhythm(-3)};
     width: auto;
   }
   .masonry-grid-column {
-    padding-left: 30px;
+    padding-left: ${rhythm(3)};
     background-clip: padding-box;
   }
 
   .masonry-grid-column > div {
-    background: #f2f2f2;
-    margin-bottom: 30px;
-    padding: 1rem;
+    margin-bottom: ${rhythm(3)};
   }
 `
 

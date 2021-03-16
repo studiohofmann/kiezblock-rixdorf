@@ -8,6 +8,10 @@ const ContactFormStyle = styled.div`
   #buttonContainer {
     display: flex;
     justify-content: space-between;
+
+    button:hover {
+      background-color: #ccce5f;
+    }
   }
 `
 

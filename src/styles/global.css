@@ -9,6 +9,11 @@ form {
 button {
   color: white;
   padding: 0.7rem;
+  cursor:pointer;
+}
+
+.button:hover {
+  background-color: #ccce5f
 }
 
 input,

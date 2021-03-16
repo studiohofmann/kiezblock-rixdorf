@@ -2,10 +2,16 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import ComponentLayout from "../components/component-layout"
+import { Helmet } from "react-helmet"
 
 export default function News({ data }) {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kiezblock Rixdorf | Neues</title>
+        <link rel="canonical" href="https://kiezblock-rixdorf.de/news" />
+      </Helmet>
       <h1>Neues</h1>
       {data.allContentfulNews.edges.map(edge => {
         return (

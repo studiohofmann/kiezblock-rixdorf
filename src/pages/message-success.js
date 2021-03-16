@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import { Helmet } from "react-helmet"
 
 const StyledMessageSuccess = styled.div`
   width: 100%;
@@ -15,6 +16,14 @@ const StyledMessageSuccess = styled.div`
 export default function MessageSuccess({ data }) {
   return (
     <StyledMessageSuccess>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kiezblock Rixdorf | Message Success</title>
+        <link
+          rel="canonical"
+          href="https://kiezblock-rixdorf.de/messaage-success"
+        />
+      </Helmet>
       <meta http-equiv="refresh" content="6; url=/contact"></meta>
       <h2
         className="body"

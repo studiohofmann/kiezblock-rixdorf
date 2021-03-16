@@ -3,10 +3,16 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import MasonryGalleryComponent from "../components/masonry-gallery-component"
 import ComponentLayout from "../components/component-layout"
+import { Helmet } from "react-helmet"
 
 export default function FAQ({ data }) {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kiezblock Rixdorf | FAQ</title>
+        <link rel="canonical" href="https://kiezblock-rixdorf.de/faq" />
+      </Helmet>
       <h1>FAQ</h1>
       <h3>
         In Rixdorf wird seit vielen Jahren über Verkehrsberuhigung diskutiert.

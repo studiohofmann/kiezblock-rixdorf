@@ -4,10 +4,16 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import MasonryGalleryComponent from "../components/masonry-gallery-component"
 import ComponentLayout from "../components/component-layout"
+import { Helmet } from "react-helmet"
 
 export default function Concept({ data }) {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kiezblock Rixdorf | Konzept</title>
+        <link rel="canonical" href="https://kiezblock-rixdorf.de/concept" />
+      </Helmet>
       <h1>Konzept</h1>
       <MasonryGalleryComponent
         masonryGallery={data.allContentfulConcept.edges.map(edge => {

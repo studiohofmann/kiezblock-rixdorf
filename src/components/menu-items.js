@@ -1,35 +1,37 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { rhythm } from "../utils/typography"
 
 const StyledLink = styled(Link)`
   text-transform: uppercase;
-  color: #a1d0e5;
-  text-decoration: none;
 
   @media (min-width: 992px) {
+    text-align: right;
+    h4 {
+      margin-bottom: ${rhythm(1 / 3)};
+    }
   }
 `
+const activeStyles = { color: "#ccce5f" }
+
 const MenuItems = () => {
   return (
     <>
-      <StyledLink to="/">
-        <h3>start</h3>
+      <StyledLink to="/news" activeStyle={activeStyles}>
+        <h4>neues</h4>
       </StyledLink>
-      <StyledLink to="/news">
-        <h3>neues</h3>
+      <StyledLink to="/concept" activeStyle={activeStyles}>
+        <h4>konzept</h4>
       </StyledLink>
-      <StyledLink to="/concept">
-        <h3>konzept</h3>
+      <StyledLink to="/faq" activeStyle={activeStyles}>
+        <h4>faq</h4>
       </StyledLink>
-      <StyledLink to="/faq">
-        <h3>faq</h3>
+      <StyledLink to="/contact" activeStyle={activeStyles}>
+        <h4>kontakt</h4>
       </StyledLink>
-      <StyledLink to="/contact">
-        <h3>kontakt</h3>
-      </StyledLink>
-      <StyledLink to="/disclaimer">
-        <h3>impressum</h3>
+      <StyledLink to="/disclaimer" activeStyle={activeStyles}>
+        <h4>impressum</h4>
       </StyledLink>
     </>
   )
