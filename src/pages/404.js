@@ -3,10 +3,11 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import { Helmet } from "react-helmet"
 
-const StyledMessageSuccess = styled.div`
+const FourOFourStyle = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -21,33 +22,33 @@ const StyledMessageSuccess = styled.div`
   }
 `
 
-export default function MessageSuccess({ data }) {
+export default function FourOFour({ data }) {
   return (
-    <StyledMessageSuccess>
+    <FourOFourStyle>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Kiezblock Rixdorf | Message Success</title>
-        <link
-          rel="canonical"
-          href="https://kiezblock-rixdorf.de/messaage-success"
-        />
+        <title>Kiezblock Rixdorf | 404</title>
+        <link rel="canonical" href="https://kiezblock-rixdorf.de/404" />
       </Helmet>
 
       <meta http-equiv="refresh" content="6; url=/contact"></meta>
+
+      <h1>{data.contentful404.heading}</h1>
       <h3
         id="message"
         dangerouslySetInnerHTML={{
-          __html: data.contentfulContact.textSuccess.childMarkdownRemark.html,
+          __html: data.contentful404.text.childMarkdownRemark.html,
         }}
       />
-    </StyledMessageSuccess>
+    </FourOFourStyle>
   )
 }
 
 export const query = graphql`
   query {
-    contentfulContact {
-      textSuccess {
+    contentful404 {
+      heading
+      text {
         childMarkdownRemark {
           html
         }

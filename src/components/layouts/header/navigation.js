@@ -1,30 +1,27 @@
 import React, { useState } from "react"
 import MenuItems from "./menu-items"
 import styled from "styled-components"
+import { rhythm } from "../../../utils/typography"
 
 const NavigationStyle = styled.nav`
   display: flex;
   position: fixed;
-  top: 1rem;
-  right: 1rem;
+  top: ${rhythm(1 / 2)};
+  right: ${rhythm(1 / 2)};
   z-index: 1;
 
-  @media (max-width: 768px) {
-    height: 0.5rem;
-    width: 1.5rem;
-    position: fixed;
-    top: 0rem;
-    right: 0.5rem;
+  @media (min-width: 992px) {
+    top: ${rhythm(1)};
+    right: ${rhythm(1)};
   }
 `
 
 const Toggle = styled.div`
-  margin-top: 1rem;
+  margin-top: ${rhythm(1 / 2)};
   display: none;
   height: 100%;
   cursor: pointer;
   z-index: 2;
-  color: blue;
 
   @media (max-width: 768px) {
     display: flex;
@@ -33,12 +30,13 @@ const Toggle = styled.div`
 
 const Navbox = styled.div`
   @media (max-width: 768px) {
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: #e5907c;
+    background-color: white;
     position: fixed;
     width: 100%;
     transition: all 0.3s ease-in;

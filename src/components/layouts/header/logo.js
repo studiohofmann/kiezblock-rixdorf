@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import LogoSVG from "../logos/logo-kiezblock-rixdorf.svg"
+import LogoSVG from "../../../logos/logo-kiezblock-rixdorf.svg"
+import { rhythm } from "../../../utils/typography"
 
 const LinkStyle = styled(Link)`
   .logo {
-    width: 10rem;
+    height: ${rhythm(3)};
   }
 
   .logo:hover {
@@ -15,8 +16,8 @@ const LinkStyle = styled(Link)`
 
   @media (min-width: 992px) {
     position: fixed;
-    top: 1rem;
-    left: 1rem;
+    top: ${rhythm(1)};
+    left: ${rhythm(1)};
   }
 `
 

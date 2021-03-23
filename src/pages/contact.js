@@ -1,22 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import ContactForm from "../components/contact-form"
+import Layout from "../components/layouts/layout"
+import ContactForm from "../components/forms/contact-form"
 import { Helmet } from "react-helmet"
-
-const ContactStyle = styled.div`
-  display: flex;
-
-  .text {
-    flex: 1;
-    margin-right: 2rem;
-  }
-  .form {
-    flex: 2;
-    margin-left: 2rem;
-  }
-`
+import ComponentLayout from "../components/layouts/component-layout"
+import InnerComponentLayout from "../components/layouts/inner-component-layout"
 
 export default function Contact({ data }) {
   return (
@@ -26,18 +14,21 @@ export default function Contact({ data }) {
         <title>Kiezblock Rixdorf | Kontakt</title>
         <link rel="canonical" href="https://kiezblock-rixdorf.de/contact" />
       </Helmet>
-      <h1>{data.contentfulContact.heading}</h1>
-      <ContactStyle>
-        <div
-          className="text"
-          dangerouslySetInnerHTML={{
-            __html: data.contentfulContact.text.childMarkdownRemark.html,
-          }}
-        />
-        <div className="form">
-          <ContactForm />
-        </div>
-      </ContactStyle>
+
+      <ComponentLayout>
+        <InnerComponentLayout>
+          <h1>{data.contentfulContact.heading}</h1>
+
+          <h3
+            className="text"
+            dangerouslySetInnerHTML={{
+              __html: data.contentfulContact.text.childMarkdownRemark.html,
+            }}
+          />
+        </InnerComponentLayout>
+
+        <ContactForm />
+      </ComponentLayout>
     </Layout>
   )
 }

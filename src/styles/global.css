@@ -1,19 +1,11 @@
-body {
-  margin: 0.5rem;
-}
-
-form {
-  width: 100%;
-}
-
 button {
   color: white;
   padding: 0.7rem;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: #ccce5f
+  background-color: #ccce5f;
 }
 
 input,
@@ -26,10 +18,4 @@ textarea {
   padding: 0.7rem;
   border: none;
   resize: none;
-}
-
-@media (min-width: 992px) {
-  html {
-    margin: 1rem 25% 1rem 25%;
-  }
 }

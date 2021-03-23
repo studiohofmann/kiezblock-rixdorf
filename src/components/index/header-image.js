@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
-import ComponentLayout from "./component-layout"
+import ComponentLayout from "../layouts/component-layout"
 
 const BackgroundSection = ({ className }) => {
   const data = useStaticQuery(
@@ -38,7 +38,7 @@ const BackgroundSection = ({ className }) => {
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;
   height: 50vh;
-  background-position: bottom center;
+  background-position: center center;
   background-repeat: repeat-y;
   background-size: cover;
 `

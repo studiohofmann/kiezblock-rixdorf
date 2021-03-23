@@ -1,11 +1,11 @@
 import React from "react"
-import Layout from "../components/layout"
-import styled from "styled-components"
-import IndexImage from "../components/index-image"
-import IndexContent from "../components/index-content"
+import Layout from "../components/layouts/layout"
+import HeaderImage from "../components/index/header-image"
+import Introduction from "../components/index/introduction"
+import Demands from "../components/index/demands"
+import Supporters from "../components/index/supporters"
+import NewsPreview from "../components/index/news-preview"
 import { Helmet } from "react-helmet"
-
-const StyledIndex = styled.div``
 
 export default function Index() {
   return (
@@ -15,10 +15,11 @@ export default function Index() {
         <title>Kiezblock Rixdorf</title>
         <link rel="canonical" href="https://kiezblock-rixdorf.de/" />
       </Helmet>
-      <StyledIndex>
-        <IndexImage />
-        <IndexContent />
-      </StyledIndex>
+      <HeaderImage />
+      <Introduction />
+      <Demands />
+      <Supporters />
+      <NewsPreview />
     </Layout>
   )
 }
