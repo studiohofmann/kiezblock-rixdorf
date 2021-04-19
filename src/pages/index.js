@@ -5,6 +5,7 @@ import Introduction from "../components/index/introduction"
 import Demands from "../components/index/demands"
 import Supporters from "../components/index/supporters"
 import NewsPreview from "../components/index/news-preview"
+
 import { Helmet } from "react-helmet"
 
 export default function Index() {
