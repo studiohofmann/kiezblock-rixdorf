@@ -136,6 +136,12 @@ export default function Footer() {
           }
         }
 
+        textDonations {
+          childMarkdownRemark {
+            html
+          }
+        }
+
         textCopyright {
           childMarkdownRemark {
             html
@@ -186,12 +192,13 @@ export default function Footer() {
         </SocialMediaStyle>
 
         <OptionalTextStyle>
-          <p id="optionalText">
-            Kiezblock Rixdorf ist eine Kampagne der Initiative „Mehr Kiez für
-            Rixdorf“
-            <br />
-            “Mehr Kiez für Rixdorf” ist ein Projekt von Changing Cities e.V.
-          </p>
+          <div id="optionalText">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: footerData.textDonations.childMarkdownRemark.html,
+              }}
+            />
+          </div>
         </OptionalTextStyle>
       </TriptychStyle>
 
