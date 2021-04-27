@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 const NewsletterStyle = styled.div`
   .button {
+    background-color: steelblue;
     display: block;
     margin-left: auto;
     margin-right: auto;

@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
     }
   }
 `
-const activeStyles = { color: "#ccce5f" }
+const activeStyles = { color: "indianred" }
 
 const MenuItems = () => {
   return (

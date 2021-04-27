@@ -33,8 +33,8 @@ const typography = new Typography({
       textAlign: "center",
     },
     h4: { fontWeight: 500 },
-    a: { color: "#a1d0e5", textDecoration: "none" },
-    "a:hover": { color: "#ccce5f" },
+    a: { color: "steelblue", textDecoration: "none" },
+    "a:hover": { color: "indianred" },
 
     "@media (min-width: 992px)": {
       h1: {

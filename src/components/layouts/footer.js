@@ -72,7 +72,7 @@ const SocialMediaStyle = styled.div`
 `
 
 const OptionalTextStyle = styled.div`
-  background: #ccce5f;
+  background: #a1d0e5;
   color: white;
   padding: ${rhythm(1 / 2)};
   border-bottom: ${rhythm(1 / 2)} solid white;
@@ -108,8 +108,8 @@ const LinkStyle = styled(Link)`
   }
 
   .logo:hover {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(44%) saturate(490%)
-      hue-rotate(9deg) brightness(88%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(43%) sepia(13%) saturate(2789%)
+      hue-rotate(313deg) brightness(100%) contrast(77%);
   }
 
   @media (min-width: 992px) {
@@ -135,7 +135,7 @@ export default function Footer() {
             html
           }
         }
-
+        headingDonations
         textDonations {
           childMarkdownRemark {
             html
@@ -192,13 +192,12 @@ export default function Footer() {
         </SocialMediaStyle>
 
         <OptionalTextStyle>
-          <div id="optionalText">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: footerData.textDonations.childMarkdownRemark.html,
-              }}
-            />
-          </div>
+          <h3>{footerData.headingDonations}</h3>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: footerData.textDonations.childMarkdownRemark.html,
+            }}
+          />
         </OptionalTextStyle>
       </TriptychStyle>
 

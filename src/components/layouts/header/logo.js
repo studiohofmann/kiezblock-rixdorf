@@ -10,8 +10,8 @@ const LinkStyle = styled(Link)`
   }
 
   .logo:hover {
-    filter: brightness(0) saturate(100%) invert(85%) sepia(44%) saturate(490%)
-      hue-rotate(9deg) brightness(88%) contrast(95%);
+    filter: brightness(0) saturate(100%) invert(43%) sepia(13%) saturate(2789%)
+      hue-rotate(313deg) brightness(100%) contrast(77%);
   }
 
   @media (min-width: 992px) {
