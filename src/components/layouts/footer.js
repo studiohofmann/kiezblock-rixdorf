@@ -198,6 +198,12 @@ export default function Footer() {
               __html: footerData.textDonations.childMarkdownRemark.html,
             }}
           />
+          <a
+            href="https://changing-cities.org/civicrm/?civiwp=CiviCRM&q=civicrm%2Fcontribute%2Ftransact&reset=1&id=28"
+            target="_blank"
+          >
+            Spende
+          </a>
         </OptionalTextStyle>
       </TriptychStyle>
 
