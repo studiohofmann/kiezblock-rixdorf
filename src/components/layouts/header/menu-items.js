@@ -30,8 +30,8 @@ const MenuItems = () => {
       <StyledLink to="/contact" activeStyle={activeStyles}>
         <h4>kontakt</h4>
       </StyledLink>
-      <StyledLink to="/disclaimer" activeStyle={activeStyles}>
-        <h4>impressum</h4>
+      <StyledLink activeStyle={activeStyles}>
+      <a href="https://changing-cities.org/impressum/"><h4>impressum</h4></a>
       </StyledLink>
     </>
   )
