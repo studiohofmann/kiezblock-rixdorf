@@ -12,6 +12,7 @@ export default function Introduction() {
             html
           }
         }
+        node_locale
       }
     }
   `)
