@@ -31,7 +31,7 @@ export default function ContactForm() {
         <input type="hidden" name="form-name" value="Contact Form" />
 
         <div>
-          <label htmlFor="name">Deine Name</label>
+          <label htmlFor="name">Dein Name</label>
           <input type="text" name="name" id="name" />
         </div>
 
